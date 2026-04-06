@@ -7,42 +7,29 @@ Cola* cola_crear()
 
 int cola_vacia(Cola* cola)
 {
-    /*
-    TODO
-    usar vaciar_lista
-    */
+    return lista_vacia(cola);
 }
 
 void cola_enqueue(Cola* cola, int dato)
 {
-    /*
-    TODO
-    usar lista_insertar_tail
-    */
+    lista_insertar_tail(cola, dato);
 }
 
 int cola_dequeue(Cola* cola)
 {
-    /*
-    TODO
-    usar lista_eliminar_head
-    */
+    return lista_eliminar_head(cola);
     return -1;
 }
 
 int cola_frente(Cola* cola)
 {
-    /*
-    TODO
-    regresar dato del head
-    */
-    return -1;
+    if (cola_vacia(cola)){
+        return -1;
+    }
+    return cola->head->dato;
 }
 
 void cola_destruir(Cola* cola)
 {
-    /*
-    TODO
-    usar lista_destruir
-    */
+    lista_destruir(cola);
 }
